@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menu_bar{
+    width: auto;
+    height: 50px;
+    background-color: gray;
+    overflow: hidden;
+}
+
+.menu_bar ul{
+    list-style: none;
+    text-align: right;
+    
+}
+
+
+.menu_bar li{
+    display: inline;
+    line-height: 50px;
+    
+}
+
+.menu_bar a{
+    text-decoration: none;
+    padding: 25px 20px;
+    font-weight: bold;
+    font-family: arial;
+    text-align: center;
+    color: white;
+}
+
+.menu_bar a:hover{
+    background-color: black;
+}
+    
