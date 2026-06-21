@@ -730,6 +730,9 @@ blockquote p,
 
 .preview-image {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 360px;
     overflow: hidden;
     background: #0b1326;
@@ -748,8 +751,8 @@ blockquote p,
     width: 100%;
     height: 100%;
     min-height: 360px;
-    object-fit: cover;
-    object-position: top center;
+    object-fit: contain;
+    object-position: center;
     transition: transform 260ms ease, opacity 260ms ease;
 }
 
@@ -829,6 +832,16 @@ blockquote p,
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
+}
+
+.contributions .project-grid {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.section.contributions {
+    width: min(1080px, calc(100% - 32px));
 }
 
 .project-links {
@@ -1036,6 +1049,27 @@ blockquote p,
     object-fit: cover;
     opacity: 0.78;
     transition: 220ms ease;
+}
+
+.contributions .project-card,
+.contributions .project-card img {
+    min-height: 250px;
+}
+
+.contributions .project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.contributions .project-card img {
+    height: 250px;
+    min-height: 0;
+    object-position: center;
+}
+
+.contributions .project-card div {
+    position: static;
+    margin: 14px;
 }
 
 .project-card:hover img {
@@ -1686,6 +1720,19 @@ cite {
     .project-card,
     .project-card img {
         min-height: 340px;
+    }
+
+    .contributions .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contributions .project-card,
+    .contributions .project-card img {
+        min-height: 250px;
+    }
+
+    .contributions .project-card img {
+        height: 250px;
     }
 
     .contact-info,
